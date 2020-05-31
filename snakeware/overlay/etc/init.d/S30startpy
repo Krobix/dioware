@@ -4,5 +4,5 @@
 while [ 1 ]
 do
   clear
-  /usr/bin/python3
+  /usr/bin/python3 /usr/sbin/dioware_boot
 done
