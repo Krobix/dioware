@@ -1,1 +1,9 @@
 #!/usr/bin/env python
+import os
+
+with open("/etc/dioware/bootpoint", "r") as f:
+    bootpoint = f.read()
+    if "bootmenu" in bootpoint:
+        print("DIOWARE: Boot Menu")
+    else:
+        os.environ["DIOMODE"] = bootpoint
