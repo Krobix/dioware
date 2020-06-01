@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+from snakewm.wm import SnakeWM
 
 with open("/etc/dioware/bootpoint", "r") as f:
     bootpoint = f.read()
@@ -7,3 +8,5 @@ with open("/etc/dioware/bootpoint", "r") as f:
         print("DIOWARE: Boot Menu")
     else:
         os.environ["DIOMODE"] = bootpoint
+        SnakeWM().run()       
+     
